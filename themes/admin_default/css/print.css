@@ -1,0 +1,78 @@
+/* CSS Document */
+body,table,em,strong {
+	font-family:Arial;
+	font-size:12px;
+}
+table.gird {
+    border-collapse:collapse;
+    width: 100%;
+	empty-cells: show;
+	border:1px solid #000;
+	border-bottom:0;
+	border-right:0;
+}
+
+table.gird tbody {
+    
+}
+
+table.gird tbody.second {
+    background:#F9F9F9
+}
+table.gird td{
+	border-right:1px solid #000;
+	border-bottom: 1px solid #000;
+	padding:3px;
+}
+table.list {
+    background: #FFF;
+    border-collapse:collapse;
+    width: 100%;
+	empty-cells: show;
+	border-top: 1px solid #b8c4cd;
+	border-right: 1px solid #b8c4cd;
+	margin-bottom:10px
+}
+
+table.list tbody {
+    
+}
+
+table.list tbody.second {
+    background:#F3F3F3
+}
+
+table.list tbody.ilimit {
+    background:#FF9
+}
+table.list tbody.limit {
+    background:#FCF
+}
+table.list tbody:hover {
+ 	
+}
+table.list td{
+	border-bottom: 1px solid #b8c4cd;
+	border-left: 1px solid #b8c4cd;
+	padding:5px;
+}
+
+table.list tfoot{
+    background:#F0F0F0
+}
+
+table.list thead {
+    background:#F0F0F0;
+	font-weight:bold;
+}
+
+table.nlist {
+    background: #FFF;
+    border-collapse:collapse;
+    width: 100%;
+	margin-bottom:10px
+}
+table.nlist td{
+    padding:5px;
+}
+

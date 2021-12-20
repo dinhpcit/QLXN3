@@ -1,0 +1,23 @@
+div.TabView{
+}
+div.TabView div.Tabs{overflow:hidden;}
+div.TabView div.Tabs a{
+	float: left;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #F4F4F4;
+    font-size: 8pt;
+    font-family: Tahoma;
+    margin-right: 3px;
+}
+div.TabView div.Tabs a:hover{color:#F00}
+div.TabView div.Tabs a.Active{color:#069; background:#E4E4E4; font-weight:bold}
+div.TabView div.Pages{background:#FFF;height:auto;width:auto;clear:both;overflow:hidden}
+div.TabView div.Pages div.Page{height:auto;width:auto;overflow:hidden;}
+div.TabView div.Pages div.Page .content{padding:20px; border: 1px solid #d1d1d1;}

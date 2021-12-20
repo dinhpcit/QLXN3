@@ -1,0 +1,27 @@
+/* CSS Document */
+body,table,em,strong {
+	font-family:Arial;
+	font-size:12px;
+}
+table.gird {
+    border-collapse:collapse;
+    width: 100%;
+	empty-cells: show;
+	border:1px solid #000;
+	border-bottom:0;
+	border-right:0;
+}
+
+table.gird tbody {
+    
+}
+
+table.gird tbody.second {
+    background:#F9F9F9
+}
+table.gird td{
+	border-right:1px solid #000;
+	border-bottom: 1px solid #000;
+	padding:3px;
+}
+

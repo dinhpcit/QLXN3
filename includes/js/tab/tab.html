@@ -1,0 +1,151 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=" http://www.w3.org/1999/xhtml">
+<head>
+<title>Tab-View</title>
+<script type="text/javascript">
+function tabview_aux(TabViewId, id)
+{
+  var TabView = document.getElementById(TabViewId);
+
+  var Tabs = TabView.firstChild;
+  while (Tabs.className != "Tabs" ) Tabs = Tabs.nextSibling;
+
+  var Tab = Tabs.firstChild;
+  var i   = 0;
+
+  do
+  {
+    if (Tab.tagName == "A")
+    {
+      i++;
+      Tab.href      = "javascript:tabview_switch('"+TabViewId+"', "+i+");";
+      Tab.className = (i == id) ? "Active" : "";
+      Tab.blur();
+    }
+  }
+  while (Tab = Tab.nextSibling);
+
+  var Pages = TabView.firstChild;
+  while (Pages.className != 'Pages') Pages = Pages.nextSibling;
+
+  var Page = Pages.firstChild;
+  var i    = 0;
+
+  do
+  {
+    if (Page.className == 'Page')
+    {
+      i++;
+      if (Pages.offsetHeight) Page.style.height = (Pages.offsetHeight-2)+"px";
+      Page.style.overflow = "auto";
+      Page.style.display  = (i == id) ? 'block' : 'none';
+    }
+  }
+  while (Page = Page.nextSibling);
+}
+
+function tabview_switch(TabViewId, id) { tabview_aux(TabViewId, id); }
+
+function tabview_initialize(TabViewId) { tabview_aux(TabViewId,  1); }
+</script>
+<style type="text/css">
+div.TabView div.Tabs
+{
+    height: 24px;
+    overflow: hidden;
+}
+
+div.TabView div.Tabs a
+{
+    float: left;
+    display: block;
+    width:  90px;
+    text-align: center;
+    height: 24px;
+    padding-top: 3px;
+    vertical-align: middle;
+    border: 1px solid black;
+    border-bottom-width: 0;
+    text-decoration: none;
+    font-family: "Arial", Serif;
+    font-weight: 900;
+    color: #000080;
+}
+
+div.TabView div.Tabs a:hover, div.TabView div.Tabs a.Active
+{
+    background-color: lightyellow;
+}
+
+div.TabView div.Pages
+{
+    clear: both;
+    border: 1px solid #404040;
+    overflow: hidden;
+}
+
+div.TabView div.Pages div.Page
+{
+    height: 100%;
+    padding: 0px;
+    overflow: hidden;
+}
+
+div.TabView div.Pages div.Page div.Pad
+{
+    padding: 3px 5px;
+}
+</style>
+</head>
+<body>
+<form action="tabview.html" method="get">
+  <div class="TabView" id="TabView">
+    <div class="Tabs" style="width: 350px;"> <a>Tab 1</a> <a>Tab 2</a> <a>Tab 3</a> </div>
+    <div class="Pages" style="width: 350px; height: 250px;">
+      <div class="Page">
+        <div class="Pad">
+          <table>
+            <tr>
+              <td style="vertical-align: top;">Distributed form:&nbsp;</td>
+              <td><input type="text" name="first" />
+                <br />
+                <small>Note: the rest of the form is at the Tab 3.</small> </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="Page">
+        <div class="Pad">
+          Tab2<br />
+          Tab2<br />
+          Tab2<br />
+        </div>
+      </div>
+      <div class="Page">
+        <div class="Pad">
+          <br />
+          <table>
+            <tr>
+              <td>Username:&nbsp;</td>
+              <td><input style="width: 120px;" type="text"     name="username" /></td>
+            </tr>
+            <tr>
+              <td>Password:&nbsp;</td>
+              <td><input style="width: 120px;" type="password" name="password" /></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><input type="submit" value="Submit" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<script type="text/javascript">
+    tabview_initialize('TabView');
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.progressBar_content { width:60%; margin:auto}
+.progressBar_content .default {
+	background: #fff;
+	border: 1px solid #00974B;	
+	border-radius: 2px;	
+	overflow: hidden;
+	line-height:16px;	
+}
+.progressBar_content .default div {
+	background-color: #00BB5E;
+	text-align:right;
+	color:#fff;
+	font-size:11px;
+}

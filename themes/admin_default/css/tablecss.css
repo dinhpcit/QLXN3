@@ -1,0 +1,112 @@
+.div_maintb {
+	height: calc(100vh - 174px);
+	width:calc(100vw - 2px);
+	overflow: scroll;
+	border-right: 1px solid #909090;
+	border-top: 1px solid #909090;
+}
+
+.div_maintb table {
+	border-spacing: 0;
+}
+.div_maintb table tr.row_second { background:#E6F7FF}
+.div_maintb table tr:hover { background:#C4E1E1; cursor:pointer}
+.div_maintb table tr.row_second:hover { background:#C4E1E1; cursor:pointer}
+.div_maintb th {
+	position: sticky;
+	top: 0;
+	background: #99ccff;
+	min-width: 30px;
+	padding: 5px;
+	border-left: 1px solid #909090;
+	border-bottom: 1px solid #909090;
+	font-weight: normal;
+}
+
+.div_maintb td {
+	padding: 5px;
+	border:0;
+	border-left: 1px solid #909090;
+	border-bottom: 1px solid #909090;
+}
+
+.div_maintb th:nth-child(1),
+.div_maintb td:nth-child(1) {
+	position: sticky;
+	left: 0;
+	width: 29px;
+	min-width: 29px;
+}
+
+.div_maintb th:nth-child(2),
+.div_maintb td:nth-child(2) {
+	position: sticky;
+	left: 40px;
+	width: 40px;
+	min-width: 40px;
+}
+.div_maintb th:nth-child(3),
+.div_maintb td:nth-child(3) {
+	position: sticky;
+	left: 91px;
+	width: 40px;
+	min-width: 40px;
+}
+.div_maintb th:nth-child(4),
+.div_maintb td:nth-child(4) {
+	position: sticky;
+	left: 142px;
+	width: 110px;
+	min-width: 110px;
+}
+.div_maintb th:nth-child(5),
+.div_maintb td:nth-child(5) {
+	position: sticky;
+	left: 263px;
+	width: 50px;
+	min-width: 50px;
+}
+.div_maintb th:nth-child(6),
+.div_maintb td:nth-child(6) {
+	position: sticky;
+	left: 324px;
+	width: 50px;
+	min-width: 50px;
+}
+.div_maintb th:nth-child(7),
+.div_maintb td:nth-child(7) {
+	position: sticky;
+	left: 385px;
+	width: 150px;
+	min-width: 150px;
+}
+.div_maintb td:nth-child(1),
+.div_maintb td:nth-child(2),
+.div_maintb td:nth-child(4){
+	background: #FFD;
+	z-index: 100;
+}
+.div_maintb td:nth-child(3){
+	background: #FFE7CE;
+	z-index: 100;
+}
+.div_maintb td:nth-child(5),
+.div_maintb td:nth-child(6){
+	background: #E8FFE8;
+	z-index: 100;
+}
+.div_maintb td:nth-child(7){
+	background: #FFD;
+	z-index: 100;
+}
+
+.div_maintb th:nth-child(1),
+.div_maintb th:nth-child(2),
+.div_maintb th:nth-child(3),
+.div_maintb th:nth-child(4),
+.div_maintb th:nth-child(5),
+.div_maintb th:nth-child(6),
+.div_maintb th:nth-child(7){
+	z-index: 300;
+}
+.ui-datepicker{z-index: 1000 !important};
