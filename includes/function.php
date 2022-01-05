@@ -264,9 +264,9 @@ function check_email_mx($email) {
 function send_mail($strSubject, $strBody, $strEmail, $ishml = false) {
 	$strSMTPHost = "mail.vista.gov.vn";
 	$strSMTPPort = 587;
-	$strSTMPUser = "covid19@vista.gov.vn";
-	$strSTMPPassword = "Vista1235";
-	$strMailFrom = "covid19@vista.gov.vn";
+	$strSTMPUser = "";
+	$strSTMPPassword = "";
+	$strMailFrom = "";
 	$strMailFromName = "ĐĂNG KÝ MÃ SỐ CA BỆNH DƯƠNG TÍNH COVI-19";
 	//Confirm registration
 	include_once (DF_ROOTDIR."/includes/phpmailer/class.phpmailer.php"); 
