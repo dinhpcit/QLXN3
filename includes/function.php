@@ -262,12 +262,12 @@ function check_email_mx($email) {
 }
 
 function send_mail($strSubject, $strBody, $strEmail, $ishml = false) {
-	$strSMTPHost = "mail.vista.gov.vn";
+	$strSMTPHost = "";
 	$strSMTPPort = 587;
 	$strSTMPUser = "";
 	$strSTMPPassword = "";
 	$strMailFrom = "";
-	$strMailFromName = "ĐĂNG KÝ MÃ SỐ CA BỆNH DƯƠNG TÍNH COVI-19";
+	$strMailFromName = "";
 	//Confirm registration
 	include_once (DF_ROOTDIR."/includes/phpmailer/class.phpmailer.php"); 
 	$mail = new PHPMailer ();
